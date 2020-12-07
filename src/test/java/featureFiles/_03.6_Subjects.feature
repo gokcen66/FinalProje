@@ -3,7 +3,7 @@ Feature: Create And Delete Subjects
   Background:
     Given Navigate to basqar
 
-    When User sending the key in the dialog content class
+    When User sending the keys in the dialog content class
       | username | daulet2030@gmail.com |
       | password | TechnoStudy123@      |
 
@@ -11,7 +11,7 @@ Feature: Create And Delete Subjects
       | loginButton |
       | gotItButton |
 
-    Then user should login successfully
+    Then User should login successfully
 
   Scenario:  Create and Delete Subjects
 
@@ -23,8 +23,8 @@ Feature: Create And Delete Subjects
     And User click on the element in the dialog content class
       | addButton |
 
-    And User sending the key in the dialog content class
-      | name | EnglandSubject |
+    And User sending the keys in the dialog content class
+      | name | Group4Subject |
       | code | 123           |
 
     And User click on the element in the dialog content class
@@ -36,12 +36,12 @@ Feature: Create And Delete Subjects
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
-      | searchName | EnglandSubject |
+    And User sending the keys in the dialog content class
+      | searchName | Group4Subject |
 
     And User click on the element in the dialog content class
       | search |
 
-    When User delete "EnglandSubject"
+    When User delete "Group4Subject"
 
     Then User should see "successfully" message

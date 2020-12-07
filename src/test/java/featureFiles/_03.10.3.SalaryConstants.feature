@@ -3,7 +3,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
   Background:
     Given Navigate to basqar
 
-    When User sending the key in the dialog content class
+    When User sending the keys in the dialog content class
       | username | daulet2030@gmail.com |
       | password | TechnoStudy123@      |
 
@@ -11,7 +11,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
       | loginButton |
       | gotItButton |
 
-    Then user should login successfully
+    Then User should login successfully
 
   Scenario:  Create , Edit and Delete Salary Constants
 
@@ -24,13 +24,13 @@ Feature: Create Edit and Delete Functionality for Human Resources
       | addButton |
       | validFrom |
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | validFrom | 12/11/2018 |
 
     And User click on the element in the dialog content class
       | closeDate |
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | nameConstants  | isim |
       | key            | a12  |
       | valueConstants | 100  |
@@ -40,24 +40,24 @@ Feature: Create Edit and Delete Functionality for Human Resources
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | searchName | isim |
 
     And User click on the element in the dialog content class
       | search |
 
-    Then user edit "isim"
+    Then User edit "isim"
 
     And User click on the element in the dialog content class
       | validFrom |
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | validFrom | 11/02/2020 |
 
     And User click on the element in the dialog content class
       | closeDate |
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | nameConstants  | editedisim |
       | key            | a13        |
       | valueConstants | 200        |
@@ -68,7 +68,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | searchName | editedisim |
 
     And User click on the element in the dialog content class

@@ -10,16 +10,10 @@ public class LeftNav extends _Parent{
 
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "(//span[text()='Setup'])[1]")
-    private WebElement setupOne;
-
-    @FindBy(xpath = "//span[text()='Parameters']")
-    private WebElement parameters;
-
-    @FindBy(xpath = "//span[text()='Countries']")
-    private WebElement country;
-    @FindBy(xpath = "//span[text()='Cities']")
-    private WebElement cities;
+    @FindBy(xpath = "//span[text()='Setup']") private WebElement setup;
+    @FindBy(xpath = "//span[text()='Parameters']") private WebElement parameters;
+    @FindBy(css = "a[href='/countries/list']") private WebElement countries;   //   linkText = "Countries"  // linkText de scroll yapmiyor
+    @FindBy(xpath = "//span[text()='Cities']") private WebElement cities;
 
     @FindBy(xpath = "//span[text()='Education']") private WebElement education;
     @FindBy(xpath = "(//span[text()='Setup'])[5]") private WebElement setupEducation;
@@ -44,18 +38,12 @@ public class LeftNav extends _Parent{
     @FindBy(xpath = "(//span[text()='Setup'])[6]") private WebElement setupBudget;
     @FindBy(xpath = "//span[text()='Cost Centers']") private WebElement costCenters;
 
-
-
     public void findElementAndClickFunction(String elementName) {
         switch (elementName) {
-            case "setupOne":
-                myElement = setupOne;break;
-            case "parameters":
-                myElement = parameters;break;
-                case "country":
-                myElement = country;break;
-            case "cities" :
-                myElement=cities; break;
+            case "setup": myElement = setup;break;
+            case "parameters": myElement = parameters;break;
+            case "countries": myElement = countries;break;
+            case "cities" : myElement=cities; break;
             case "education": myElement = education;break;
             case "setupEducation": myElement = setupEducation;break;
             case "subjectCategories": myElement = subjectCategories;break;
@@ -78,9 +66,6 @@ public class LeftNav extends _Parent{
         clickFunction(myElement);
 
 
-        //(//span[text()='Setup'])[1]
-        //(//span[text()='(//span[text()='Setup']'])[1]
-        // (//span[text()='Countries'])[1]
     }
 
 }

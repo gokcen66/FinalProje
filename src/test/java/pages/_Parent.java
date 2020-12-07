@@ -19,23 +19,21 @@ public class _Parent {
     public _Parent(){
         driver= Driver.getDriver();
         wait=new WebDriverWait(driver,10);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
     }
 
     public void clickFunction(WebElement element)
     {
-        waitUntilClickable(element);// eleman clikable olana kadar bekle
-        scrollToElement(element); // eleman kadar scroll yap
-        element.click();// click yap
+        waitUntilClickable(element);
+        scrollToElement(element);
+        element.click();
     }
 
     public void sendKeysFunction(WebElement element, String value)
     {
-        waitUntilVisible(element);// elelman görünüt olana kadar bekle
-        scrollToElement(element);// elemana kadar scroll yap
-        element.clear();// eleman clear yap
-        element.sendKeys(value);// value yi gönder
+        waitUntilVisible(element);
+        scrollToElement(element);
+        element.clear();
+        element.sendKeys(value);
     }
 
     public void waitUntilClickable(WebElement element){
@@ -54,34 +52,18 @@ public class _Parent {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void waiting(int ms) //bunu waiting olarak dialogcontente kullandik
-    {
-        try {
-            Thread.sleep(ms);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void verifyElementContainsText(WebElement element, String expectedText) {
+
+        waitUntilVisible(element);
+        String actualText = element.getText();
+        System.out.println(actualText);
+        Assert.assertTrue(actualText.toLowerCase().contains(expectedText.toLowerCase()));
+
     }
 
-    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList){
-        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
-        return elementList;//country deki 10 ulkenin listini aldik gozukene kadar bekle dedik garanti altina aldik
-    }
+    public WebElement randomSelectFromList(List<WebElement> elementsList) {
+        return elementsList.get((int)(Math.random() * elementsList.size()));
 
-    public void verifyElementContainsText(WebElement element, String text) {
-        //  waitUntilVisible(element);
-        wait.until(ExpectedConditions.textToBePresentInElement(element, text));
-
-        System.out.println(element.getText());
-        // System.out.println(text);
-
-        Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
-
-
-        // public WebElement randomSelectFromList(List<WebElement> elementsList) {
-        //     return elementsList.get((int)(Math.random() * elementsList.size()));
-//
-        //  }
     }
 
 

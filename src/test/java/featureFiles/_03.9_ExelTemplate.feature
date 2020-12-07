@@ -1,9 +1,9 @@
 Feature: Create Edit and Delete Functionality for Reports
 
-  Background:
+  Background:exel future background
     Given Navigate to basqar
 
-    When User sending the key in the dialog content class
+    When User sending the keys in the dialog content class
       | username | daulet2030@gmail.com |
       | password | TechnoStudy123@      |
 
@@ -11,7 +11,7 @@ Feature: Create Edit and Delete Functionality for Reports
       | loginButton |
       | gotItButton |
 
-    Then user should login successfully
+    Then User should login successfully
 
   Scenario:  Create , Edit and Delete Excel Template
 
@@ -23,8 +23,8 @@ Feature: Create Edit and Delete Functionality for Reports
     And User click on the element in the dialog content class
       | addButton |
 
-    And User sending the key in the dialog content class
-      | name | ExcelTemplate |
+    And User sending the keys in the dialog content class
+      | name | Group4ExcelTemplate |
 
     And User click on the element in the dialog content class
       | saveButton |
@@ -34,16 +34,16 @@ Feature: Create Edit and Delete Functionality for Reports
     And User click on the element in the dialog content class
       | closeDialog |
 
-    And User sending the key in the dialog content class
-      | searchName | ExcelTemplate |
+    And User sending the keys in the dialog content class
+      | searchName | Group4ExcelTemplate |
 
     And User click on the element in the dialog content class
       | search |
 
-    Then user edit "ExcelTemplate"
+    Then User edit "Group4ExcelTemplate"
 
-    And User sending the key in the dialog content class
-      | name | EnglandEditedExcelTemplete |
+    And User sending the keys in the dialog content class
+      | name | Group4EditedExcelTemplete |
 
     And User click on the element in the dialog content class
       | saveButton |
@@ -53,12 +53,12 @@ Feature: Create Edit and Delete Functionality for Reports
     And User click on the element in the dialog content class
       | closeDialog |
 
-    And User sending the key in the dialog content class
-      | searchName | EnglandEditedExcelTemplete |
+    And User sending the keys in the dialog content class
+      | searchName | Group4EditedExcelTemplate |
 
     And User click on the element in the dialog content class
       | search |
 
-    When User delete "EnglandEditedExcelTemplete"
+    When User delete "Group4EditedExcelTemplate"
 
     Then User should see "successfully" message

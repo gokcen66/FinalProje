@@ -28,3 +28,17 @@
         <!--        <scripts>-->
         <!--            <![CDATA[-->
         <!--        $(document).ready(function() {-->
+
+        <!--        });-->
+        <!--      ]]>-->
+        <!--        </scripts>-->
+
+        <!--        &lt;!&ndash; custom styles &ndash;&gt;-->
+        <!--        <styles>-->
+        <!--            <![CDATA[-->
+
+        <!--      ]]>-->
+        <!--        </styles>-->
+    </configuration>
+</extentreports>
+

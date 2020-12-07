@@ -2,15 +2,16 @@ package runners;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import org.testng.annotations.AfterClass;
+
 
 @CucumberOptions(
+        tags = {"@RegressionTest"},
         features = {"src/test/java/featureFiles"},
         glue = {"stepDefinations"},
         dryRun = false,
-        plugin={
+        plugin={//basit rapor oluşturan plugin
                 "html:target/cucumber-report",
-        "json:target/cucumber.jyson"
+                "json:target/cucumber.json"
 }
 )
 

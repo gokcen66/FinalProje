@@ -7,19 +7,22 @@ import org.testng.annotations.AfterClass;
 
 
 @CucumberOptions(
-        features = {"src/test/java/featureFiles"},
-        glue = {"stepDefinations"},
+        tags = {"@RegressionTest"},
+        features = {"src/test/java/featureFiles/_01_Login.feature"},
+        glue = {"StepDefinations"},
         dryRun = false,
-        plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport/ExtentReportRegression.html"
+        plugin = {
+
+                "com.cucumber.listener.ExtentCucumberFormatter:target/ExtentReport/ExtentReportRegression.html"
 
         }
 )
 
-public class extendReport extends AbstractTestNGCucumberTests {
+public class extendReport extends AbstractTestNGCucumberTests{
     @AfterClass()
-            public static void afterClass(){
+    public static void afterClass(){
 
-        Reporter.loadXMLConfig("src/test/java/runners/extendReport.java");
+        Reporter.loadXMLConfig("src/test/java/XMLFiles/extendReportSet.xml");
         Reporter.setSystemInfo("User Name","Gokcen Keskin");
         Reporter.setSystemInfo("Aplication Name", "BASQAR");
         Reporter.setSystemInfo("Operation System Info", System.getProperty("os.name"));
@@ -27,4 +30,5 @@ public class extendReport extends AbstractTestNGCucumberTests {
         Reporter.setTestRunnerOutput("Test execution Cucumber report");
 
 }}
+
 

@@ -3,7 +3,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
   Background:
     Given Navigate to basqar
 
-    When User sending the key in the dialog content class
+    When User sending the keys in the dialog content class
       | username | daulet2030@gmail.com |
       | password | TechnoStudy123@      |
 
@@ -11,7 +11,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
       | loginButton |
       | gotItButton |
 
-    Then user should login successfully
+    Then User should login successfully
 
   Scenario:  Create, Edit and Delete Position Salary
 
@@ -23,23 +23,23 @@ Feature: Create Edit and Delete Functionality for Human Resources
     And User click on the element in the dialog content class
       | addButton |
 
-    And User sending the key in the dialog content class
-      | namePositionSalary | Group3NewPositionSalary |
+    And User sending the keys in the dialog content class
+      | namePositionSalary | Group4NewPositionSalary |
 
     And User click on the element in the dialog content class
       | saveButton |
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
-      | searchName | Group3NewPositionSalary |
+    And User sending the keys in the dialog content class
+      | searchName | Group4NewPositionSalary |
 
     And User click on the element in the dialog content class
       | search |
 
-    Then user edit "EnglandNewPositionSalary"
+    Then User edit "Group4NewPositionSalary"
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | namePositionSalary | editedPositionSalary |
 
     And User click on the element in the dialog content class
@@ -47,7 +47,7 @@ Feature: Create Edit and Delete Functionality for Human Resources
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | searchName | editedPositionSalary |
 
     And User click on the element in the dialog content class
@@ -68,33 +68,33 @@ Feature: Create Edit and Delete Functionality for Human Resources
     And User click on the element in the dialog content class
       | addButton |
 
-    And User sending the key in the dialog content class
-      | name      | EnglandNewPosition |
-      | shortName | G3NP              |
+    And User sending the keys in the dialog content class
+      | name      | Group4NewPosition |
+      | shortName | G4NP              |
 
     And User click on the element in the dialog content class
       | saveButton |
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
-      | searchName | EnglandPosition |
+    And User sending the keys in the dialog content class
+      | searchName | Group4NewPosition |
 
     And User click on the element in the dialog content class
       | search |
 
-    Then user edit "EnglandNewPosition"
+    Then User edit "Group4NewPosition"
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | name      | editedPosition |
-      | shortName | EngNnewP        |
+      | shortName | G4NnewP        |
 
     And User click on the element in the dialog content class
       | saveButton |
 
     Then User should see "successfully" message
 
-    And User sending the key in the dialog content class
+    And User sending the keys in the dialog content class
       | searchName | editedPosition |
 
     And User click on the element in the dialog content class
